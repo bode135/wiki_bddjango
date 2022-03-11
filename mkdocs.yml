@@ -1,9 +1,11 @@
 site_name: MkLorum
 site_url: https://www.baidu.com/
 
-#nav:
-#    - Home: index.md
-#    - About: about.md
+nav:
+    - Home: index.md
+    - QuickStart: QuickStart.md
+    - About: about.md
+#    - Test: 测试文档.md
 
 theme: readthedocs
 
