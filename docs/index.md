@@ -9,9 +9,16 @@ pip install bddjango
 ```
 
 ## 快速开始
+
+
+
+> 这里开发一个基本的api接口作为示例
+
+
+
 - [`QuickStart.md`](QuickStart.md)
-- [`docs/QuickStart.md`](docs/QuickStart.md)
-- [`about.md`](about.md)
+
+
 
 ## 功能
 
@@ -24,11 +31,10 @@ pip install bddjango
     - 排序
     - 分页
     - 详情页
-    - 权限控制
-
+    
 - 高级检索`AdvancedSearchView`
 
-- 自动生成`wiki`文档
+
 
 
 ### Admin类
@@ -44,6 +50,14 @@ pip install bddjango
 
 
 
-## 备注
+### 自动生成Wiki
+
+> 需注意代码风格
+
+- 用于简化文档撰写流程
+
+
+
+## 仓库地址
 
 - [bddjango的Git首页](https://gitee.com/bode135/bddjango)

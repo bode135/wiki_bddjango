@@ -1,13 +1,17 @@
-site_name: MkLorum
+site_name: bddjango
 site_url: https://www.baidu.com/
 
 nav:
     - Home: index.md
     - QuickStart: QuickStart.md
+    - API文档格式说明: FormatDescription.md
     - About: about.md
 #    - Test: 测试文档.md
 
 theme: readthedocs
+
+extra_css: [extra.css]
+
 
 
 
