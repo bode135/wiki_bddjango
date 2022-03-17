@@ -1,5 +1,9 @@
 # 关于
 
+
+> document_version: 1.1
+
+
 ## 相关链接
 
 - [Git仓库](https://gitee.com/bode135/bddjango)

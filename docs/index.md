@@ -1,6 +1,6 @@
 # bddjango
 
-> 打包drf+simpleui环境下的常用开发工具, 简化开发流程
+> 打包drf+simpleui环境下的常用开发工具, 简化开发流程.
 
 ## 安装  
 
