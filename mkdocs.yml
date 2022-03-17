@@ -4,7 +4,7 @@ site_url: https://www.baidu.com/
 nav:
     - Home: index.md
     - QuickStart: QuickStart.md
-    - API文档格式说明: FormatDescription.md
+    - ApiFormatDescription: FormatDescription.md
     - About: about.md
 #    - Test: 测试文档.md
 
