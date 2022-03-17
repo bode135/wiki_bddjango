@@ -6,7 +6,10 @@ nav:
     - QuickStart: QuickStart.md
     - API文档格式说明: FormatDescription.md
     - 关于: about.md
-    - __点击看广告: advertisement.md
+    - ________ad1: advertisement.md
+    - ________ad2: advertisement.md
+    - ________ad3: advertisement.md
+
 
 theme: readthedocs
 
