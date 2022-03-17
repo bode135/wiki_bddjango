@@ -8,10 +8,10 @@ nav:
     - 关于: about.md
     - 　　　　　: ________ad1.md
     - 　　　　　　　　: ________ad2.md
-    #- ________ad3: advertisement.md
 
 
 theme: readthedocs
+
 
 extra_css: [extra.css]
 
