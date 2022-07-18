@@ -22,15 +22,15 @@ strong u{
 
 
 /* 小代码 */
-.rst-content code{
-	background-color: #ededed;
-	color: #243131;
-	border: 1px solid #e7eaed;
-	border-radius: 3px;
-	/*padding: 0;*/
-	padding: 2px 4px 0px 4px;
-	font-size: 0.9em;
-}
+/*.rst-content code{*/
+/*	background-color: #ededed;*/
+/*	color: #243131;*/
+/*	border: 1px solid #e7eaed;*/
+/*	border-radius: 3px;*/
+/*	!*padding: 0;*!*/
+/*	padding: 2px 4px 0px 4px;*/
+/*	font-size: 0.9em;*/
+/*}*/
 
 /* 下划线 */
 u {
@@ -39,14 +39,14 @@ u {
 }
 
 
-/* 隐藏脚注 */
-footer{
-	visibility: hidden;
-}
+ /*隐藏脚注 */
+/*footer{*/
+/*	visibility: hidden;*/
+/*}*/
 
 /* 显示换页按钮*/
 .rst-footer-buttons
-{ 
+{
 	visibility:visible;
 }
 
