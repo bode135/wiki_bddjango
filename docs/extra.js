@@ -1,5 +1,12 @@
 // 回头尝试注入评论功能
-console.log('~~~ js测试 ~~~');
+var domain = window.location.host;
+var domain = window.location.host;
+var is_readthedocs = false;
+if(domain.indexOf("readthedocs") != -1){
+	is_readthedocs = true;
+}
+
+console.log('~~~ js测试 ~~~ domain, is_readthedocs:', domain, is_readthedocs);
 
 // $x('//div[@class="ethical-sidebar"]')[0].remove()
 // var elem = document.getElementsByClassName('rst-footer-buttons');
@@ -87,5 +94,8 @@ function run_func_until_success(func, max_running_time=20 * 1000)
     }
 }
 //var interval_handle = setInterval(close_ad, RUNNING_INTERVAL);
-var interval_handle = setInterval(function(){run_func_until_success(close_ad, MAX_RUNNING_TIME)}, RUNNING_INTERVAL);
+if (is_readthedocs)
+{
+    var interval_handle = setInterval(function(){run_func_until_success(close_ad, MAX_RUNNING_TIME)}, RUNNING_INTERVAL);
+}
 
