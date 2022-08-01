@@ -121,7 +121,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+/site123
 
 # mypy
 .mypy_cache/
@@ -142,4 +142,8 @@ migrate_db.bat
 .pycharm_helpers/
 
 shells/
+
+expect_conf.yaml
+my_scp.exe
+
 

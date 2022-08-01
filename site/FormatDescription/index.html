@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.baidu.com/FormatDescription/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>API文档格式说明 - bddjango</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="bddjango" class="md-header__button md-logo" aria-label="bddjango" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            bddjango
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API文档格式说明
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="bddjango" class="md-nav__button md-logo" aria-label="bddjango" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    bddjango
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QuickStart/" class="md-nav__link">
+        QuickStart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API文档格式说明
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API文档格式说明
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    请求方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    请求示例
+  </a>
+  
+    <nav class="md-nav" aria-label="请求示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本查找类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    增删改查类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高级检索类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    请求参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    返回参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    返回示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    备注
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    请求方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    请求示例
+  </a>
+  
+    <nav class="md-nav" aria-label="请求示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本查找类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    增删改查类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高级检索类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    请求参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    返回参数说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    返回示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    备注
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="api">API文档格式说明</h1>
+<ul>
+<li>约定API的一般格式, 便于简化文档、统一API风格.</li>
+<li>使返回的字段都能用来进行<code>基本检索</code>和<code>高级检索</code>.</li>
+</ul>
+<h2 id="_1">请求方式</h2>
+<blockquote>
+<p>主要为<strong>增删查改类</strong>和<strong>基本查找类</strong>, 前者支持所有增删查改操作, 后者仅支持列表页和详情页查表操作;  </p>
+<p><strong>高级检索类</strong>则用来对数据进行高级检索.</p>
+</blockquote>
+<ul>
+<li>请求类型说明</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本查找类</td>
+<td>获取列表页和详情页, 其中列表页可用返回的字段进行精确查找</td>
+</tr>
+<tr>
+<td>增删查改类</td>
+<td>继承了基本查找类, 且支持全部操作(增删查改), 以及批量删除和更新</td>
+</tr>
+<tr>
+<td>高级检索类</td>
+<td>继承了基本查找类, 且支持POST高级检索</td>
+</tr>
+<tr>
+<td>其它类</td>
+<td>单一的GET, POST, 具体使用方法将额外备注</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">请求示例</h2>
+<h3 id="_3">基本查找类</h3>
+<blockquote>
+<p>主要用来查找数据 , 如<code>列表页</code>和<code>详情页</code></p>
+</blockquote>
+<pre><code># --- 查
+GET /api/search/BookTable/17985/                                # 详情页
+GET /api/search/BookTable/?p=1&amp;page_size=10&amp;order_type_ls=-id       # 列表页, 按id倒序返回
+GET /api/search/BookTable/?title=党史&amp;author_code=20306/      # 列表页, 一般来说, 可用所有返回的字段进行精确查找
+
+
+# --- 批量查找(根据id_ls)
+POST /api/user/Group/
+data = {
+    &quot;post_type&quot;: &quot;bulk_list&quot;,        
+    &quot;id_ls&quot;: [27, 28],
+}
+
+</code></pre>
+<h3 id="_4">增删改查类</h3>
+<blockquote>
+<p>继承了基本查找类</p>
+<p>基本使用方法: GET查, POST增, PUT改, DELETE删.<br />
+也可以使用<code>post_type</code>指定操作类型, 
+其中<code>post_type_ls = ["list", "retrieve", "create", "update", "delete", "bulk_delete", "bulk_update", "bulk_list"]</code></p>
+</blockquote>
+<pre><code># --- 增
+POST /api/search/BookTable/
+
+
+# --- 改
+PUT /api/search/BookTable/17985/
+
+
+# --- 删
+DELETE /api/search/BookTable/17985/
+
+
+# --- 批量删除/更新
+POST /api/user/Group/
+data = {
+    &quot;post_type&quot;: &quot;bulk_update&quot;,        # bulk_update或bulk_delete
+    &quot;id_ls&quot;: [27, 28],
+
+    # 如果是bulk_update, 则需要指定要更新的字段和值
+    &quot;field_dc&quot;: {
+        &quot;more_group__active&quot;: 1, 
+        &quot;more_group__explain&quot;: &quot;asdfdas&quot;
+    }
+}
+
+</code></pre>
+<h3 id="_5">高级检索类</h3>
+<blockquote>
+<p>使用<code>Q_add_ls</code>参数进行高级检索, 最多支持两层检索式嵌套.</p>
+</blockquote>
+<pre><code># 检索`author_code`(学者编码)为`29856`, 且标题`title`中包含关键词`可持续`, 
+# 且`文章出版时间`为`(2019-02-10, 2019-04-01]`的文章
+
+{
+    &quot;page_size&quot;: 3,     # 返回数量
+    &quot;distinct_field_ls&quot;: [&quot;title&quot;],         # 去重字段
+    &quot;order_type_ls&quot;: [&quot;title&quot;, &quot;id&quot;],       # 排序字段
+    &quot;Q_add_ls&quot;: [
+        {
+            &quot;add_logic&quot;: &quot;and&quot;,
+            &quot;Q_ls&quot;: [
+                {
+                    &quot;add_logic&quot;: &quot;and&quot;,
+                    &quot;search_field&quot;: &quot;author_code&quot;,
+                    &quot;search_keywords&quot;: &quot;29856&quot;,
+                    &quot;accuracy&quot;: &quot;1&quot;
+                },
+                {
+                    &quot;add_logic&quot;: &quot;and&quot;,
+                    &quot;search_field&quot;: &quot;title&quot;,
+                    &quot;search_keywords&quot;: &quot;可持续&quot;,
+                    &quot;accuracy&quot;: &quot;0&quot;
+                }
+            ]
+        },
+        {
+            &quot;add_logic&quot;: &quot;and&quot;,
+            &quot;Q_ls&quot;: [
+                {
+                    &quot;add_logic&quot;: &quot;and&quot;,
+                    &quot;search_field&quot;: &quot;published_date&quot;,
+                    &quot;search_keywords&quot;: &quot;2019-02-10&quot;,
+                    &quot;accuracy&quot;: &quot;gt&quot;
+                },
+                {
+                    &quot;add_logic&quot;: &quot;and&quot;,
+                    &quot;search_field&quot;: &quot;published_date&quot;,
+                    &quot;search_keywords&quot;: &quot;2019-04-01&quot;,
+                    &quot;accuracy&quot;: &quot;lte&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<h2 id="_6">请求参数说明</h2>
+<ul>
+<li>列表页参数</li>
+</ul>
+<blockquote>
+<p>基本查找类都会携带页面控制参数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>参数名</th>
+<th>说明</th>
+<th>是否必填</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>p</td>
+<td>页码</td>
+<td>否</td>
+</tr>
+<tr>
+<td>int</td>
+<td>page_size</td>
+<td>每页数量</td>
+<td>否</td>
+</tr>
+<tr>
+<td>list</td>
+<td>order_type_ls</td>
+<td>排序字段名, 如<code>-id</code>为倒序排列, <code>__None__</code>则为相关性排序</td>
+<td>否</td>
+</tr>
+<tr>
+<td>list</td>
+<td>distinct_field_ls</td>
+<td>去重字段名, 参考<code>高级检索类</code>的请求示例.</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>详情页</p>
+</li>
+<li>
+<p>指定主键名, 一般为<code>id</code>, 栏目用<code>code</code>.</p>
+</li>
+<li>
+<p>批量更新 or 批量删除</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>参数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>post_type</td>
+<td>post请求的类型</td>
+</tr>
+<tr>
+<td>list</td>
+<td>id_ls</td>
+<td>id列表</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>field_dc</td>
+<td>更新字段的字典, 如<code>{'active': 1}</code>, 若为<code>active</code>字段为外键则需要加上表名<code>more_group__active</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">返回参数说明</h2>
+<blockquote>
+<p>一般的列表信息将存放于<code>result</code>中的<code>data</code>中</p>
+</blockquote>
+<ul>
+<li>携带的基本参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>参数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>status</td>
+<td>200,201成功;404错误</td>
+</tr>
+<tr>
+<td>int</td>
+<td>msg</td>
+<td>信息</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>result</td>
+<td>返回结果</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>result</code>中的<code>page_dc</code>页码信息</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>参数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>count_items</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>total_pages</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>page_size</td>
+<td>每页条数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>p</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_8">返回示例</h2>
+<pre><code># 列表页, 注意`status`和`result`可能会有变动, 以实际情况为准.
+{
+    &quot;status&quot;: 200,
+    &quot;msg&quot;: &quot;ok&quot;,
+    &quot;result&quot;: {
+        &quot;page_dc&quot;: {
+            &quot;count_items&quot;: 4507,
+            &quot;total_pages&quot;: 451,
+            &quot;page_size&quot;: 10,
+            &quot;p&quot;: 1
+        },
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 17986,
+                &quot;title&quot;: &quot;唯物论与经验批评论&quot;,
+                &quot;author_name&quot;: &quot;列宁著&quot;,
+                &quot;publication_date&quot;: null
+            },
+            ...
+        ]
+    }
+}
+</code></pre>
+<h2 id="_9">备注</h2>
+<ul>
+<li>API格式说明文档</li>
+<li>返回的如果是<code>SerializerMethodField</code>类型数据, 一般不能用于作为检索参数</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../QuickStart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: QuickStart" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              QuickStart
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../about/" class="md-footer__link md-footer__link--next" aria-label="Next: 关于" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              关于
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+        <script src="../extra.js"></script>
+      
+        <script src="../comment.js"></script>
+      
+    
+  </body>
+</html>
