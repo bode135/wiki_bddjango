@@ -14,8 +14,8 @@ theme: material
 
 extra_css: [extra.css]
 
-extra_javascript: [extra.js, comment.js]
-#extra_javascript: [comment.js]
+extra_javascript: [comment.js]
+#extra_javascript: [extra.js, comment.js]
 
 plugins:
     - search:
