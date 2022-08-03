@@ -19,12 +19,15 @@ function clean_pathname(pathname, prefix){
     }
     return pathname;
 }
-pathname = clean_pathname(pathname, base_route);
 
 var is_readthedocs = false;
 if(host.indexOf("readthedocs") != -1){
 	is_readthedocs = true;
 	pathname = clean_pathname(pathname, "/zh/latest");
+	pathname = clean_pathname(pathname, "/en/latest");
+}
+else {
+    pathname = clean_pathname(pathname, base_route);
 }
 
 console.log("~~~~~~~~~~~ pathname: ", pathname);
