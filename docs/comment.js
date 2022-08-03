@@ -9,12 +9,24 @@ var href = window.location.href;
 
 var pathname = window.location.pathname;
 
-console.log("~~~~~~~~~~~ ", pathname, ' --- ', pathname.substring(0, base_route.length), " --- ", base_route);
-if(pathname.substring(0, base_route.length) == base_route)
-    pathname = pathname.substring(base_route.length); /* 获取文件路径（文件地址） */
-if (pathname[0] != "/"){
-    pathname = "/" + pathname;
+// console.log("~~~~~~~~~~~ ", pathname, ' --- clean_pathname: ', pathname.substring(0, base_route.length), " --- ", base_route);
+
+function clean_pathname(pathname, prefix){
+    if(pathname.substring(0, prefix.length) == prefix)
+        pathname = pathname.substring(prefix.length); /* 获取文件路径（文件地址） */
+    if (pathname[0] != "/"){
+        pathname = "/" + pathname;
+    }
 }
+pathname = clean_pathname(pathname, base_route);
+
+var is_readthedocs = false;
+if(host.indexOf("readthedocs") != -1){
+	is_readthedocs = true;
+	pathname = clean_pathname(pathname, "/zh/latest");
+}
+
+console.log("~~~~~~~~~~~ pathname: ", pathname);
 
 // 尝试注入评论功能
 console.log("****** 222 尝试注入评论功能, host: ", host, " --- pathname:", pathname, " --- baseUrl: ", baseUrl, " | wiki_id: ", wiki_id);
