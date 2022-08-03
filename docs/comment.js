@@ -17,6 +17,7 @@ function clean_pathname(pathname, prefix){
     if (pathname[0] != "/"){
         pathname = "/" + pathname;
     }
+    return pathname;
 }
 pathname = clean_pathname(pathname, base_route);
 
