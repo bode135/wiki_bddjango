@@ -1,8 +1,11 @@
 // var baseUrl = "http://www.bodexiong.vip:2204";
 var base_host = "https://www.bodexiong.vip";
 var base_route = "/mkdocs";
+
 var baseUrl = base_host + base_route;
 var wiki_id = "asd";
+// var wiki_id = null;
+
 
 var host = window.location.host;
 var href = window.location.href;
@@ -10,6 +13,7 @@ var href = window.location.href;
 var pathname = window.location.pathname;
 
 // console.log("~~~~~~~~~~~ ", pathname, ' --- clean_pathname: ', pathname.substring(0, base_route.length), " --- ", base_route);
+wiki_id = wiki_id ? wiki_id: host;
 
 function clean_pathname(pathname, prefix){
     if(pathname.substring(0, prefix.length) == prefix)
@@ -98,10 +102,44 @@ parent.appendChild(before);
 
 var behind = document.getElementsByTagName("footer")[0];
 
-var add_bottom_bar = 1;
-var comment_img_url = '<img src="' + baseUrl + '/api/static/ckeditor/ckeditor/plugins/smiley/images/55.png"/>';
-var bottomBar__title = comment_img_url + '全部评论';
+if(true)
+{
+    // 动态引入
+
+    // var target_element = document.getElementsByClassName("md-copyright")[0];
+    // var target_element = document.getElementsByClassName("md-footer-meta__inner md-grid")[0];
+    var target_element = document.getElementsByClassName("md-footer-meta md-typeset")[0];
+
+
+    var center = document.createElement('div');
+    // center.style="padding: 0;margin:0;list-style: none; background-color: gray;"
+    // center.style="background-color: gray;"
+    center.style="text-align: center;";
+
+    var a_i = document.createElement('a');
+    a_i.href = "https://beian.miit.gov.cn/shouye.html";
+    a_i.textContent = "京ICP备2021004487号";
+    center.appendChild(a_i);
+
+    // target_element.parent.app(a_i);
+    target_element.innerHTML="";
+    target_element.appendChild(center);
+    console.log("aaaaaaaaaaaa", target_element);
+
+
+    // behind.lastChild.appendChild(a_i);
+
+    // var a_i1 = document.createElement('a');
+    // parent.appendChild(a_i1);
+
+    // parent.insertBefore(bottomBar, behind);
+    // parent.insertBefore(before, behind);
+}
+
+var add_bottom_bar = 0;
 if (add_bottom_bar) {
+    var comment_img_url = '<img src="' + baseUrl + '/api/static/ckeditor/ckeditor/plugins/smiley/images/55.png"/>';
+    var bottomBar__title = comment_img_url + '全部评论';
     var bottomBar = document.createElement("h3");
 // <button type="button">Click Me!</button>
 // topBar.type = "button";
@@ -164,6 +202,9 @@ function changeFrameHeight() {
 // };
 
 // 动态引入js 后，调用js里面的abc()函数
+if (add_bottom_bar)
+{
+
 before.onload = function () {
     changeFrameHeight();
     var url = baseUrl + "/api/comment/CommentNode/" + "?page_size=2&parent_code=0";
@@ -197,3 +238,14 @@ before.onload = function () {
         });
 
 };
+
+}
+
+  //
+  // <center style="padding: 0;margin:0;list-style: none; background-color: gray;">
+  //   <br><a href="https://beian.miit.gov.cn/shouye.html">京ICP备2021004487号</a>
+  // </center>
+
+
+
+
